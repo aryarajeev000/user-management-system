@@ -460,3 +460,63 @@ nav button {
   color: #9ca3af;
   cursor: not-allowed;
 }
+
+
+/* =========================
+   Profile Edit
+========================= */
+
+.profile-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.profile-actions button.secondary {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.success-msg {
+  margin-bottom: 12px;
+  color: #166534;
+  font-size: 14px;
+}
+
+/* =========================
+   Change Password Section
+========================= */
+
+.password-card {
+  margin-top: 28px;
+  padding: 22px;
+  border-radius: 16px;
+  background: var(--primary-soft);
+}
+
+.password-card h4 {
+  margin-bottom: 12px;
+  color: var(--primary-dark);
+}
+
+.password-card input {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+}
+
+.password-card button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--primary-dark)
+  );
+  color: #fff;
+  border: none;
+  font-weight: 600;
+}

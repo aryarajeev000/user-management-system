@@ -1,13 +1,13 @@
-# Mini User Management System
+# User Management System
 
 ## Project Overview
-This project is a full-stack User Management System designed to handle user authentication, role-based authorization, and user lifecycle management.  
-It supports secure login/signup, profile management, and admin-level user controls using a clean and scalable architecture.
+This project is a full-stack **User Management System** built as part of the **Backend Developer Intern Assessment**.  
+It provides secure authentication, role-based access control, admin-level user management, and a clean frontend interface.
+
+The system focuses on **security, correctness, and scalability**, with a minimal yet professional UI.
 
 ---
-Deployed Link :
-Backend :- https://user-management-system-it6g.onrender.com
-Frontend :- 
+
 ## Tech Stack
 
 ### Backend
@@ -15,51 +15,99 @@ Frontend :-
 - Express.js
 - MongoDB (Mongoose)
 - JWT (HTTP-only cookies)
-- bcrypt
-- Joi (validation)
+- bcrypt (password hashing)
+- Joi / Zod (input validation)
 
 ### Frontend
 - React (Vite)
 - React Router DOM
 - Axios
 - Context API
-- Global CSS (style.css)
-
-### Deployment
-- Backend: Render / Railway
-- Frontend: Vercel / Netlify
-- Database: MongoDB Atlas
+- Plain CSS (custom fintech aqua theme)
 
 ---
 
-## Features
+## Backend Features
 
 ### Authentication
-- User signup with full name, email, and password
-- Email format validation using Joi
-- Strong password validation using Joi
+- User signup with **full name, email, and password**
+- Email format validation
+- Strong password validation
 - Password hashing using bcrypt
+- JWT authentication token on signup
 - User login with email and password
-- JWT authentication using HTTP-only cookies
-- User logout by clearing authentication cookie
+- Credential verification
+- JWT authentication token on login
+- Get current logged-in user information
+- Secure logout functionality (cookie cleared)
 
-### User Management (User)
-- View own profile information
-- Update full name and email
-- Access protected routes after authentication
-
-### User Management (Admin)
-- View all users with pagination
+### User Management – Admin
+- View all users
+- Pagination support (10 users per page)
 - Activate user accounts
 - Deactivate user accounts
 - Admin-only protected routes
 
+### User Management – User
+- View own profile
+- Update full name and email
+- Change password (old password verification required)
+
 ### Security
-- HTTP-only cookie-based JWT authentication
-- Role-Based Access Control (RBAC)
+- Password hashing using bcrypt
+- Protected routes using authentication middleware
+- Role-based access control (admin / user)
 - Input validation on all endpoints
-- Environment variable based configuration
-- Global fallback error handling
+- Proper HTTP status codes
+- Environment variables for sensitive data (JWT secret)
+- Cookie-based authentication (HTTP-only)
+
+---
+
+## Frontend Features
+
+### Login Page
+- Email and password input fields
+- Client-side form validation
+- Error message display
+- Redirect to dashboard on success
+- Link to signup page
+
+### Signup Page
+- Full name, email, password inputs
+- Required field validation
+- Email format validation
+- Password strength validation
+- Server-side error handling
+- Redirect to login on success
+
+### User Profile Page
+- Display user information
+- Edit full name and email
+- Save and cancel actions
+- Change password section
+- Success and error messages
+- Admin-specific section (for admin users)
+
+### Admin Dashboard
+- Table displaying all users
+- Columns: email, full name, role, status, actions
+- Pagination (10 users per page)
+- Activate / deactivate user actions
+- Confirmation dialog before status change
+- Clean, structured UI
+
+### Navigation Bar
+- Display logged-in user name
+- Display user role
+- Role-based navigation links
+- Logout button
+- Redirect to login after logout
+
+### Protected Routes
+- Prevent unauthenticated access
+- Admin-only pages restricted to admins
+- Automatic redirection for unauthorized users
 
 ---
 
