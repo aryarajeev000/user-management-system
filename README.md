@@ -5,7 +5,9 @@ This project is a full-stack User Management System designed to handle user auth
 It supports secure login/signup, profile management, and admin-level user controls using a clean and scalable architecture.
 
 ---
-
+Deployed Link :
+Backend :- https://user-management-system-it6g.onrender.com
+Frontend :- 
 ## Tech Stack
 
 ### Backend
