@@ -1,14 +1,13 @@
-import jwt from "jsonwebtoken";
+import { verifyToken } from "../utils/jwt.js";
 
 const protect = (req, res, next) => {
-  const auth = req.headers.authorization;
+  const token = req.cookies.token;
 
-  if (!auth || !auth.startsWith("Bearer "))
+  if (!token)
     return res.status(401).json({ message: "Unauthorized" });
 
   try {
-    const token = auth.split(" ")[1];
-    req.user = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = verifyToken(token);
     next();
   } catch {
     res.status(401).json({ message: "Invalid token" });
