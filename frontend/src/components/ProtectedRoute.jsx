@@ -6,8 +6,10 @@ const ProtectedRoute = ({ children, adminOnly }) => {
   const { user } = useContext(AuthContext);
 
   if (!user) return <Navigate to="/login" />;
-  if (adminOnly && user.role !== "admin")
+
+  if (adminOnly && user.role !== "admin") {
     return <Navigate to="/profile" />;
+  }
 
   return children;
 };
