@@ -7,11 +7,18 @@ It provides secure authentication, role-based access control, admin-level user m
 The system focuses on **security, correctness, and scalability**, with a minimal yet professional UI.
 
 ## Deployed Link
+
 ### Backend
 https://user-management-system-it6g.onrender.com
 ### Frontend
 user-management-system-moeu.vercel.app
 
+### admin user
+admin@gmail.com
+Admin@1234
+### user
+user@gmail.com
+User@1234
 ---
 
 ## Tech Stack
